@@ -1,0 +1,5 @@
+Trilhas da Vila — Minicurso Desvendando a Godot · SASI / UFAC
+Arte e efeito sonoro: Ninja Adventure Asset Pack, Pixel-boy.
+Licença dos recursos do pacote: Creative Commons Zero (CC0 1.0 Universal).
+https://pixel-boy.itch.io/ninja-adventure-asset-pack
+Código, mapas e cenas preparados para o minicurso.

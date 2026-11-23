@@ -1,0 +1,43 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://interfaces/menu_pausa/menu_pausa.gd" id="script"]
+
+[node name="MenuPausa" type="CanvasLayer"]
+layer = 4
+visible = false
+process_mode = 3
+script = ExtResource("script")
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.13, 0.14, 0.72)
+
+[node name="Centro" type="CenterContainer" parent="Fundo"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cartao" type="PanelContainer" parent="Fundo/Centro"]
+custom_minimum_size = Vector2(150, 0)
+
+[node name="Coluna" type="VBoxContainer" parent="Fundo/Centro/Cartao"]
+theme_override_constants/separation = 7
+
+[node name="Titulo" type="Label" parent="Fundo/Centro/Cartao/Coluna"]
+text = "Jogo pausado"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 18
+
+[node name="Continuar" type="Button" parent="Fundo/Centro/Cartao/Coluna"]
+text = "Continuar"
+custom_minimum_size = Vector2(0, 23)
+
+[node name="MenuPrincipal" type="Button" parent="Fundo/Centro/Cartao/Coluna"]
+text = "Menu Principal"
+custom_minimum_size = Vector2(0, 23)

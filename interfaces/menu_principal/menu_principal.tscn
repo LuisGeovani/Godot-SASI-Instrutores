@@ -1,0 +1,64 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://interfaces/menu_principal/menu_principal.gd" id="script"]
+[ext_resource type="PackedScene" path="res://cenario/terreno.tscn" id="campo"]
+
+[node name="MenuPrincipal" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("script")
+
+[node name="Paisagem" parent="." instance=ExtResource("campo")]
+position = Vector2(-70, -36)
+
+[node name="Sombra" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.05, 0.11, 0.13, 0.35)
+
+[node name="Cartao" type="PanelContainer" parent="."]
+offset_left = 20.0
+offset_top = 34.0
+offset_right = 210.0
+
+[node name="Coluna" type="VBoxContainer" parent="Cartao"]
+theme_override_constants/separation = 5
+
+[node name="Evento" type="Label" parent="Cartao/Coluna"]
+text = "SASI   /   UFAC"
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.980, 0.804, 0.412, 1)
+
+[node name="Titulo" type="Label" parent="Cartao/Coluna"]
+text = "Trilhas da Vila"
+theme_override_font_sizes/font_size = 22
+
+[node name="Subtitulo" type="Label" parent="Cartao/Coluna"]
+text = "Minicurso Desvendando a Godot"
+theme_override_font_sizes/font_size = 10
+
+[node name="Espaco" type="Control" parent="Cartao/Coluna"]
+custom_minimum_size = Vector2(0, 3)
+
+[node name="NovoJogo" type="Button" parent="Cartao/Coluna"]
+text = "Novo Jogo"
+custom_minimum_size = Vector2(0, 23)
+
+[node name="Sair" type="Button" parent="Cartao/Coluna"]
+text = "Sair"
+custom_minimum_size = Vector2(0, 23)
+
+[node name="Creditos" type="PanelContainer" parent="."]
+offset_left = 20.0
+offset_top = 204.0
+
+[node name="Arte" type="Label" parent="Creditos"]
+text = "Arte: Ninja Adventure (Pixel-boy, CC0)"
+theme_override_font_sizes/font_size = 10

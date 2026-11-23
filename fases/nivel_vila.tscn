@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://fases/fase.gd" id="fase"]
+[ext_resource type="PackedScene" path="res://cenario/terreno.tscn" id="terreno"]
+[ext_resource type="PackedScene" path="res://entidades/jogador/jogador.tscn" id="jogador"]
+[ext_resource type="PackedScene" path="res://interfaces/menu_pausa/menu_pausa.tscn" id="pausa"]
+
+[node name="Vila" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("fase")
+
+[node name="Terreno" parent="." instance=ExtResource("terreno")]
+
+[node name="Jogador" parent="." instance=ExtResource("jogador")]
+position = Vector2(232, 178)
+
+[node name="MenuPausa" parent="." instance=ExtResource("pausa")]
+
+[editable path="Terreno"]

@@ -1,0 +1,153 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://entidades/jogador/jogador.gd" id="script"]
+[ext_resource type="Texture2D" path="res://assets/personagens/hunter.png" id="folha"]
+
+[sub_resource type="Animation" id="idle_down"]
+resource_name = "idle_down"
+length = 0.24
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00), "transitions": PackedFloat32Array(1), "update": 1, "values": [0]}
+
+[sub_resource type="Animation" id="idle_up"]
+resource_name = "idle_up"
+length = 0.24
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00), "transitions": PackedFloat32Array(1), "update": 1, "values": [1]}
+
+[sub_resource type="Animation" id="idle_left"]
+resource_name = "idle_left"
+length = 0.24
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00), "transitions": PackedFloat32Array(1), "update": 1, "values": [2]}
+
+[sub_resource type="Animation" id="idle_right"]
+resource_name = "idle_right"
+length = 0.24
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00), "transitions": PackedFloat32Array(1), "update": 1, "values": [3]}
+
+[sub_resource type="Animation" id="walk_down"]
+resource_name = "walk_down"
+length = 0.52
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00, 0.13, 0.26, 0.39), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 1, "values": [4, 0, 12, 0]}
+
+[sub_resource type="Animation" id="walk_up"]
+resource_name = "walk_up"
+length = 0.52
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00, 0.13, 0.26, 0.39), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 1, "values": [5, 1, 13, 1]}
+
+[sub_resource type="Animation" id="walk_left"]
+resource_name = "walk_left"
+length = 0.52
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00, 0.13, 0.26, 0.39), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 1, "values": [6, 2, 14, 2]}
+
+[sub_resource type="Animation" id="walk_right"]
+resource_name = "walk_right"
+length = 0.52
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00, 0.13, 0.26, 0.39), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 1, "values": [7, 3, 15, 3]}
+
+[sub_resource type="Animation" id="attack_down"]
+resource_name = "attack_down"
+length = 0.24
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00, 0.08, 0.16), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [0, 16, 16]}
+
+[sub_resource type="Animation" id="attack_up"]
+resource_name = "attack_up"
+length = 0.24
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00, 0.08, 0.16), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [1, 17, 17]}
+
+[sub_resource type="Animation" id="attack_left"]
+resource_name = "attack_left"
+length = 0.24
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00, 0.08, 0.16), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [2, 18, 18]}
+
+[sub_resource type="Animation" id="attack_right"]
+resource_name = "attack_right"
+length = 0.24
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 0
+tracks/0/keys = {"times": PackedFloat32Array(0.00, 0.08, 0.16), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [3, 19, 19]}
+
+[sub_resource type="AnimationLibrary" id="biblioteca"]
+_data = {
+&"idle_down": SubResource("idle_down"),
+&"idle_up": SubResource("idle_up"),
+&"idle_left": SubResource("idle_left"),
+&"idle_right": SubResource("idle_right"),
+&"walk_down": SubResource("walk_down"),
+&"walk_up": SubResource("walk_up"),
+&"walk_left": SubResource("walk_left"),
+&"walk_right": SubResource("walk_right"),
+&"attack_down": SubResource("attack_down"),
+&"attack_up": SubResource("attack_up"),
+&"attack_left": SubResource("attack_left"),
+&"attack_right": SubResource("attack_right")
+}
+
+[sub_resource type="CircleShape2D" id="pes"]
+radius = 5.0
+
+[node name="Jogador" type="CharacterBody2D"]
+move_speed = 84.0
+motion_mode = 1
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("script")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+texture = ExtResource("folha")
+hframes = 4
+vframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("pes")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("biblioteca")
+
+[node name="Camera2D" type="Camera2D" parent="."]
