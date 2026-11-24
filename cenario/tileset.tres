@@ -1,11 +1,11 @@
-[gd_resource type="TileSet" format=3]
+[gd_resource type="TileSet" format=3 uid="uid://b75bq3fq21kvu"]
 
-[ext_resource type="Texture2D" path="res://assets/cenario/solo.png" id="tex0"]
-[ext_resource type="Texture2D" path="res://assets/cenario/agua.png" id="tex1"]
-[ext_resource type="Texture2D" path="res://assets/cenario/natureza.png" id="tex2"]
-[ext_resource type="Texture2D" path="res://assets/cenario/casas.png" id="tex3"]
-[ext_resource type="Texture2D" path="res://assets/cenario/piso.png" id="tex4"]
-[ext_resource type="Texture2D" path="res://assets/cenario/parede.png" id="tex5"]
+[ext_resource type="Texture2D" uid="uid://di75cs4rorap5" path="res://assets/cenario/solo.png" id="tex0"]
+[ext_resource type="Texture2D" uid="uid://vkhsh34il0jb" path="res://assets/cenario/agua.png" id="tex1"]
+[ext_resource type="Texture2D" uid="uid://tytnbadx5qi1" path="res://assets/cenario/natureza.png" id="tex2"]
+[ext_resource type="Texture2D" uid="uid://y66kudbjoa48" path="res://assets/cenario/casas.png" id="tex3"]
+[ext_resource type="Texture2D" uid="uid://dvf1m4ntsegeq" path="res://assets/cenario/piso.png" id="tex4"]
+[ext_resource type="Texture2D" uid="uid://uc4h2aei27bo" path="res://assets/cenario/parede.png" id="tex5"]
 
 [sub_resource type="TileSetAtlasSource" id="atlas0"]
 resource_name = "solo"
@@ -28,23 +28,14 @@ texture = ExtResource("tex0")
 resource_name = "agua"
 texture = ExtResource("tex1")
 0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:6/0 = 0
-2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:7/0 = 0
-0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:8/0 = 0
-0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:8/0 = 0
-2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="atlas2"]
 resource_name = "natureza"

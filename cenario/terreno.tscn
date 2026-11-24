@@ -1,6 +1,10 @@
 [gd_scene format=3]
 
 [ext_resource type="TileSet" path="res://cenario/tileset.tres" id="tiles"]
+[ext_resource type="Script" path="res://cenario/agua_lenta.gd" id="agua_lenta"]
+
+[sub_resource type="RectangleShape2D" id="area_agua"]
+size = Vector2(112, 64)
 
 [node name="Terreno" type="Node2D"]
 y_sort_enabled = true
@@ -12,6 +16,13 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAwAAAABAAAAAAAAAAwAAAACAAAAAAAAAAw
 z_index = -2
 tile_set = ExtResource("tiles")
 tile_map_data = PackedByteArray("AAAUAA0AAQAAAAYAAAAVAA0AAQABAAYAAAAWAA0AAQABAAYAAAAXAA0AAQABAAYAAAAYAA0AAQABAAYAAAAZAA0AAQABAAYAAAAaAA0AAQACAAYAAAAUAA4AAQAAAAcAAAAVAA4AAQABAAcAAAAWAA4AAQABAAcAAAAXAA4AAQABAAcAAAAYAA4AAQABAAcAAAAZAA4AAQABAAcAAAAaAA4AAQACAAcAAAAUAA8AAQAAAAcAAAAVAA8AAQABAAcAAAAWAA8AAQABAAcAAAAXAA8AAQABAAcAAAAYAA8AAQABAAcAAAAZAA8AAQABAAcAAAAaAA8AAQACAAcAAAAUABAAAQAAAAgAAAAVABAAAQABAAgAAAAWABAAAQABAAgAAAAXABAAAQABAAgAAAAYABAAAQABAAgAAAAZABAAAQABAAgAAAAaABAAAQACAAgAAAA=")
+[node name="AguaLenta" type="Area2D" parent="."]
+position = Vector2(376, 240)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("agua_lenta")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AguaLenta"]
+shape = SubResource("area_agua")
 [node name="ChaoFlorido" type="TileMapLayer" parent="."]
 z_index = -1
 tile_set = ExtResource("tiles")

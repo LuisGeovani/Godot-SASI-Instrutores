@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Jogador
 
 @export_category("Movimento")
 @export var move_speed: float = 84.0
@@ -11,6 +12,8 @@ extends CharacterBody2D
 var facing: String = "down"
 var is_attacking: bool = false
 var cooldown_remaining: float = 0.0
+# Multiplicador aplicado por áreas como a água lenta.
+var speed_multiplier: float = 1.0
 
 
 func _physics_process(delta: float) -> void:
@@ -37,7 +40,7 @@ func _physics_process(delta: float) -> void:
 	)
 
 	_update_facing(input_direction)
-	velocity = input_direction * move_speed
+	velocity = input_direction * move_speed * speed_multiplier
 	move_and_slide()
 
 	# ANIMACAO
